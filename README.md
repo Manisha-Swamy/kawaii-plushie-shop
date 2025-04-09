@@ -40,3 +40,13 @@ MockAPI.io	                     Simulated REST API
 <img width="499" alt="image" src="https://github.com/user-attachments/assets/8c683080-466e-413c-a5cd-9cd73a199062" />
 
 
+
+📝 MockAPI
+
+<img width="758" alt="image" src="https://github.com/user-attachments/assets/daceccf4-8e38-4425-a537-d0114aa7762e" />
+
+
+
+🧸 Order histroy view
+
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/3ddb2c75-23e9-42ad-9798-0f7cdca15027" />
