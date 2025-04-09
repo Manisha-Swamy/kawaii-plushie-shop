@@ -1,0 +1,251 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to top right, #ffe6f0, #d0f0ff);
+  color: #444;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #ff69b4;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #ff66c4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: #ffccf9;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.filters button.active,
+.filters button:hover {
+  background-color: #ffc0cb;
+  transform: scale(1.1);
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
+    text-align: center;
+    animation: floatUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  @keyframes floatUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }/* Floating Background Elements */
+.floating-clouds::before, .floating-hearts::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/tJgVKUt.png'); /* cloud */
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: floatClouds 60s linear infinite;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  .floating-hearts::before {
+    background-image: url('https://i.imgur.com/zfMdZKc.png'); /* hearts */
+    animation: floatHearts 30s linear infinite;
+  }
+  
+  @keyframes floatClouds {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+  }
+  
+  @keyframes floatHearts {
+    from { background-position: 0 100%; }
+    to { background-position: 0 -100%; }
+  }
+  
+  /* Registration Page */
+  .register-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
+  }
+  .register-form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .register-form button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+  }
+
+
+.cart-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart-item {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
+  display: flex;
+  gap: 15px;
+  width: 90%;
+  max-width: 500px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 80px;
+  border-radius: 15px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
+}
+
+.payment-form input {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.payment-form button {
+    background-color: #ff66c4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .order-table {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+  }
+  
+  .order-table th, .order-table td {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .order-table thead {
+    background-color: #ffccf9;
+    color: #444;
+  }
+  
+  .order-table tbody tr:nth-child(even) {
+    background-color: #ffe6f0;
+  }
+  
+  /* Floating coins and stars */
+  .floating-coins::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/x1xzZn5.png'); /* coins */
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    animation: floatHearts 40s linear infinite;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  .floating-stars::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/jHzQbTV.png'); /* stars */
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    animation: floatHearts 50s linear infinite;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  

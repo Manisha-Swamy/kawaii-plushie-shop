@@ -1,0 +1,31 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Kawaii Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="register-page">
+  <div class="floating-hearts"></div>
+  <div class="register-container">
+    <h2>Sign Up to Join the Cute World 💕</h2>
+    <form class="register-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#">Login here</a></p>
+  </div>
+  <script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("🎉 Registered successfully (not really, this is just a demo)!");
+    });
+  </script>
+  
+</body>
+</html>

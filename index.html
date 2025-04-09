@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kawaii Shop - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-clouds"></div>
+  <header>
+    <h1>🌸 Kawaii Plushie Shop 🌸</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="payment.html">Payment</a>
+      <a href="orders.html">Orders</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="plushies">Plushies</button>
+    <button data-filter="stationery">Stationery</button>
+    <button data-filter="accessories">Accessories</button>
+  </section>
+
+  <main class="gallery"></main>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+
+  <script type="module">
+    import { fetchProducts } from './api.js';
+  
+    const container = document.createElement('div');
+    container.style.display = "flex";
+    container.style.flexWrap = "wrap";
+    container.style.justifyContent = "center";
+  
+    document.body.appendChild(container);
+  
+    async function loadProducts() {
+      const products = await fetchProducts();
+      
+      products.forEach(product => {
+        const card = document.createElement('div');
+        card.style.border = '1px solid pink';
+        card.style.borderRadius = '12px';
+        card.style.margin = '10px';
+        card.style.padding = '10px';
+        card.style.width = '150px';
+        card.style.background = '#fff0f6';
+        card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+        
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" width="100%">
+          <h4>${product.name}</h4>
+          <p>₹${product.price}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+  
+    loadProducts();
+  </script>
+  
+</body>
+</html>
