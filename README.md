@@ -1,15 +1,23 @@
 # kawaii-plushie-shop
 
 🌸 Kawaii Plushie Shop
+
 A highly animated, responsive, and adorable e-commerce frontend built with HTML, CSS, and JavaScript. This project features a soft kawaii aesthetic with category filters, animated UI, and pages like cart, register, and order summary.
 
 🚀 Features
+
 💖 Cute, colorful, and highly animated UI
+
 🧸 Product filtering by categories (Plushies, Stationery, Accessories)
+
 🛒 Cart system
+
 📦 Order summary & payment flow
+
 👩‍💻 Registration form with validations
+
 📱 Fully responsive on all devices
+
 
 🛠️ Tech Stack
 Tech	                           Usage
